@@ -16,6 +16,10 @@
 
   // Prevent floats from breaking the navbar
   &:extend(.clearfix all);
+  
+  -webkit-transition: left 3s;
+    -moz-transition: left 3s;
+    -o-transition: left 3s;
 
   @media (min-width: @grid-float-breakpoint) {
     border-radius: @navbar-border-radius;
@@ -150,6 +154,7 @@
 .navbar-fixed-top {
   top: 0;
   border-width: 0 0 1px;
+  
 }
 .navbar-fixed-bottom {
   bottom: 0;
@@ -223,6 +228,41 @@
   }
 }
 
+.off-canvas{
+  &:extend(.navbar-toggle);
+  float:left;
+  margin-left: @navbar-padding-horizontal;
+  margin-right: 0px;
+    
+  @media (min-width: @grid-float-breakpoint) {
+    display:block;
+    margin-right: 15px;
+    } 
+}
+
+.off-canvas-menu{
+  position: absolute;
+  left:-60%;
+  top:0;
+  height: 100%;
+  width: 60%;
+  background-color: @navbar-default-bg;
+  
+  @media (min-width: @grid-float-breakpoint) {
+    width: 30%;
+    left:-30%;
+  }
+}
+
+.off-canvas-pushed{
+    left:60%;
+    overflow-x:hidden;
+    @media (min-width: @grid-float-breakpoint) {
+      left:30%;
+      .navbar-fixed-top{  
+      }
+  }
+}
 
 // Navbar nav links
 //
