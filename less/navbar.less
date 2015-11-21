@@ -17,9 +17,9 @@
   // Prevent floats from breaking the navbar
   &:extend(.clearfix all);
   
-  -webkit-transition: left 3s;
-    -moz-transition: left 3s;
-    -o-transition: left 3s;
+  -webkit-transition: left 1.5s;
+    -moz-transition: left 1.5s;
+    -o-transition: left 1.5s;
 
   @media (min-width: @grid-float-breakpoint) {
     border-radius: @navbar-border-radius;
@@ -167,6 +167,8 @@
 
 .navbar-brand {
   float: left;
+  position: relative;
+  overflow-x: hidden;
   padding: @navbar-padding-vertical @navbar-padding-horizontal;
   font-size: @font-size-large;
   line-height: @line-height-computed;
@@ -241,27 +243,84 @@
 }
 
 .off-canvas-menu{
-  position: absolute;
-  left:-60%;
+  position: fixed;
+  left:-50%;
   top:0;
   height: 100%;
-  width: 60%;
+  width: 50%;
   background-color: @navbar-default-bg;
+  overflow-y: hidden;
+  -webkit-transition: left 1.5s;
+  -moz-transition: left 1.5s;
+  -o-transition: left 1.5s;
+      
+  ul > li > a {
+    color: @navbar-default-link-color;
+    
+    &:hover,
+    &:focus {
+      color: @navbar-default-link-hover-color;
+      background-color: @navbar-default-link-hover-bg;
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-default-link-active-color;
+        background-color: @navbar-default-link-active-bg;
+      }
+    }
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-default-link-disabled-color;
+        background-color: @navbar-default-link-disabled-bg;
+      }
+    }
+  > ul {
+    width:100%;
+    padding-top: 30px;  
+  }
   
+  > ul > li {
+    display: block;
+    padding-top: 0;
+    padding-left: 0;
+    float:none;
+    width:100%;
+  }
+  
+  > ul > li > a {
+    width:100%;
+    text-align: center;
+  }
   @media (min-width: @grid-float-breakpoint) {
     width: 30%;
     left:-30%;
   }
 }
 
+.fixed-menu{
+  position:fixed;
+  left:0;
+  top:0;
+}
+
 .off-canvas-pushed{
-    left:60%;
-    overflow-x:hidden;
-    @media (min-width: @grid-float-breakpoint) {
-      left:30%;
-      .navbar-fixed-top{  
-      }
-  }
+  left:50%;  
+  overflow-x:hidden;
+  @media (min-width: @grid-float-breakpoint) {
+    left:30%;
+    .navbar-fixed-top{  
+    } 
+  }   
+}   
+  
+.off-canvas-menu-pushed{
+  left:0;
+  
 }
 
 // Navbar nav links
@@ -317,6 +376,20 @@
   }
 }
 
+.off-canvas-link {
+  &:extend(.navbar-nav);
+  min-width: 80%;
+  position: absolute;
+  float:left;
+    > li > a {
+    padding-top:    10px;
+    padding-bottom: 10px;
+    line-height: @line-height-computed;
+    float:left;
+    
+    
+  }
+}
 
 // Navbar form
 //
