@@ -1,3 +1,18 @@
+/* ========================================================================
+ * Bootstrap: off-canvas-menu.js v1.0.0
+ * ========================================================================
+ * Authors: Ahmed Elmaghraby - Joseph Hsu - Kelsey Hawley
+ ======================================================================== */
+
+function SetOffCanvasMenu(){
+  $("body").addClass("off-canvas-body");
+}
+
+$( ".off-canvas" ).click(function() {
+$('body').toggleClass("off-canvas-pushed");
+$('.off-canvas-menu').toggleClass("off-canvas-menu-pushed")
+$('.navbar-fixed-top').toggleClass("off-canvas-pushed");        
+});
 /*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.

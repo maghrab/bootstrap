@@ -4307,6 +4307,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     display: none;
   }
 }
+.off-canvas-body {
+  position: relative;
+  left: 0;
+  -webkit-transition: left 1.5s;
+  -moz-transition: left 1.5s;
+  -o-transition: left 1.5s;
+}
 .off-canvas {
   float: left;
   margin-left: 15px;
@@ -4325,6 +4332,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   height: 100%;
   width: 50%;
   background-color: #f8f8f8;
+  border-right: solid 1px;
+  border-color: #e7e7e7;
   overflow-y: hidden;
   -webkit-transition: left 1.5s;
   -moz-transition: left 1.5s;
