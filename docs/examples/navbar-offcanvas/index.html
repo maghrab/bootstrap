@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Fixed Top Navbar Example for Bootstrap</title>
+    <title>Off-Canvas Menu Example for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../../dist/css/bootstrap.css" rel="stylesheet">
@@ -60,34 +60,35 @@
 
     <div class="container">
 
+        <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>Off-canvas menu example</h1>
+        <p>This example is a quick exercise to illustrate how the off-canvas menu work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
+        <p>To see the difference between static and fixed top navbars with the off-canvas menu, just scroll.</p>
+        <p>
+          <a class="btn btn-lg btn-primary fixed-nav-bar" role="button">Fixed Navigation Bar</a>
+          <a class="btn btn-lg btn-primary static-nav-bar" role="button">Static Navigation Bar</a>
+        </p>
+      </div>
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
-        <h1>Navbar example</h1>
-        <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-        <p>To see the difference between static and fixed top navbars, just scroll.</p>
+        <h1>Off-canvas menu example (for scrolling)</h1>
+        <p>This example is a quick exercise to illustrate how the off-canvas menu work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
+        <p>To see the difference between static and fixed top navbars with the off-canvas menu, just scroll.</p>
         <p>
-          <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
+          <a class="btn btn-lg btn-primary fixed-nav-bar" role="button">Fixed Navigation Bar</a>
+          <a class="btn btn-lg btn-primary static-nav-bar" role="button">Static Navigation Bar</a>
         </p>
       </div>
         
-          <!-- Main component for a primary marketing message or call to action -->
+        <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
-        <h1>Navbar example</h1>
-        <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-        <p>To see the difference between static and fixed top navbars, just scroll.</p>
+        <h1>Off-canvas menu example (for scrolling)</h1>
+        <p>This example is a quick exercise to illustrate how the off-canvas menu work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
+        <p>To see the difference between static and fixed top navbars with the off-canvas menu, just scroll.</p>
         <p>
-          <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
-        </p>
-      </div>
-        
-        
-          <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <h1>Navbar example</h1>
-        <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-        <p>To see the difference between static and fixed top navbars, just scroll.</p>
-        <p>
-          <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
+          <a class="btn btn-lg btn-primary fixed-nav-bar" role="button">Fixed Navigation Bar</a>
+          <a class="btn btn-lg btn-primary static-nav-bar" role="button">Static Navigation Bar</a>
         </p>
       </div>
 
@@ -109,5 +110,18 @@
     
     <!-- Set up the off-canvas-menu -->
     <script> SetOffCanvasMenu(); </script>
+    <!-- Toggle between fixed and static navbars -->
+    <script>
+    $(".fixed-nav-bar").click(function(){
+      $(".navbar").removeClass("navbar-static-top");
+      $(".navbar").addClass("navbar-fixed-top");
+      $("body").css("padding-top","70px");
+    });
+    $(".static-nav-bar").click(function(){
+      $(".navbar").removeClass("navbar-fixed-top");
+      $(".navbar").addClass("navbar-static-top");
+      $("body").css("padding-top","0");
+    });
+    </script>
   </body>
 </html>
