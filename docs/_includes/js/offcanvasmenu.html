@@ -1,0 +1,51 @@
+<div class="bs-docs-section">
+  <h1 class="page-header">Off-canvas Menu</h1>
+  <p>Off-canvas menu allows you to add a menu to your page that pushes the screen when the menu button is triggered.</p>
+
+  <h2 >Example</h2>
+  <p>Check the live demo by clicking on this <a href="../../../docs/examples/navbar-offcanvas/index.html">link</a></p>
+
+  <h2 >Usage</h2>
+  <p>The off-canvas menu can be used with either a static or fixed navigation bar</p>
+
+
+  <h3>Menu Button</h3>
+  <p>To attach a button to the menu, simple add class <code>off-canvas</code> to your button. The button should be placed in the navigation bar at the top of screen.</p>
+
+{% highlight html %}
+<!-- HTML to write -->
+<button type="button" class="navbar-toggle off-canvas">
+            <span class="sr-only">Toggle Menu</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+{% endhighlight %}
+
+  <h3>Menu container</h3>
+  <p>A container must be added to represent the menu. It should be a division with class <code>off-canvas-menu</code></p>
+
+<div class="bs-callout bs-callout-danger">
+    <h4>Menu container in the code</h4>
+    <p>Since the container is off-canvas and it is fixed, <strong>you must place it inside the body</strong>.</p>    
+</div>
+
+{% highlight html %}
+<!-- HTML to write -->
+<div class="off-canvas-menu">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+{% endhighlight %}
+  
+  <h3>JavaScript</h3>
+  <p>The following function must be added to your JavaScript file in order to initiate the feature</p>
+
+{% highlight js %}
+SetOffCanvasMenu();
+{% endhighlight %}
+  
+</div>
