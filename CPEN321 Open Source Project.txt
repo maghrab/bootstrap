@@ -1,0 +1,14 @@
+We added the off-canvas menu feature to the Bootstrap Library.
+
+- Off-canvas Feature added to the core:
+
+  * less/navbar.less
+  * dist/js/bootstrap.js
+  
+- Example page:
+
+  * docs/examples/navbar-offcanvas
+  
+- Usage:
+
+  * docs/_includes/js/offcanvasmenu.html
